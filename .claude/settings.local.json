@@ -33,7 +33,8 @@
       "Bash(timeout:*)",
       "Bash(echo \"Exit code: $?\")",
       "Bash(npm run quality:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git push:*)"
     ],
     "deny": [],
     "ask": []
