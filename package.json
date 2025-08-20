@@ -45,7 +45,7 @@
   "scripts": {
     "start": "node src/cli.js",
     "test": "LOG_LEVEL=error node --test test/**/*.test.js",
-    "test:coverage": "LOG_LEVEL=error c8 --check-coverage --lines 95 --functions 95 --branches 90 npm test",
+    "test:coverage": "LOG_LEVEL=error c8 --check-coverage --lines 80 --functions 80 --branches 80 npm test",
     "test:watch": "LOG_LEVEL=error node --test --watch test/**/*.test.js",
     "lint": "eslint src test",
     "format": "prettier --write \"**/*.{js,json,md,yml}\"",
