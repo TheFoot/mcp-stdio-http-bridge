@@ -81,11 +81,14 @@ Configure in your project's `.mcp.json`:
 {
   "mcpServers": {
     "my-server": {
-      "command": "npx",
-      "args": ["@thefoot/mcp-stdio-http-bridge"],
-      "env": {
-        "MCP_HTTP_URL": "http://localhost:3200/mcp"
-      }
+        "command": "sh",
+        "args": [
+            "-c",
+            "node $(npm root)/@thefoot/mcp-stdio-http-bridge/src/cli.js"
+        ],
+        "env": {
+            "MCP_HTTP_URL": "http://localhost:3200/mcp"
+        }
     }
   }
 }
@@ -154,53 +157,6 @@ bridge.stop();
 - `stop` - Emitted when bridge stops
 - `error` - Emitted on errors
 - `session` - Emitted when session ID is established
-
-## Docker Usage
-
-### With Docker Compose
-
-```yaml
-version: '3.8'
-
-services:
-  mcp-server:
-    image: your-mcp-server:latest
-    ports:
-      - '3200:3200'
-
-  mcp-bridge:
-    image: node:24-alpine
-    command: npx @thefoot/mcp-stdio-http-bridge --url http://mcp-server:3200/mcp
-    depends_on:
-      - mcp-server
-    environment:
-      - MCP_HTTP_URL=http://mcp-server:3200/mcp
-```
-
-### Connecting to Running Container
-
-```json
-{
-  "mcpServers": {
-    "docker-mcp": {
-      "command": "docker",
-      "args": [
-        "run",
-        "-i",
-        "--rm",
-        "--network",
-        "host",
-        "node:24-alpine",
-        "npx",
-        "@thefoot/mcp-stdio-http-bridge"
-      ],
-      "env": {
-        "MCP_HTTP_URL": "http://localhost:3200/mcp"
-      }
-    }
-  }
-}
-```
 
 ## Health Checks
 
