@@ -34,7 +34,9 @@
       "Bash(echo \"Exit code: $?\")",
       "Bash(npm run quality:*)",
       "Bash(git add:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(npm outdated)",
+      "Bash(npm run test:coverage:*)"
     ],
     "deny": [],
     "ask": []
