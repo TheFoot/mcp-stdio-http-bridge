@@ -41,8 +41,6 @@
     "deny": [],
     "ask": []
   },
-  "enabledMcpjsonServers": [
-    "docauto-mcp"
-  ],
+  "enabledMcpjsonServers": ["docauto-mcp"],
   "enableAllProjectMcpServers": true
 }
