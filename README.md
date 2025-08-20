@@ -1,7 +1,7 @@
 # mcp-stdio-http-bridge
 
 [![npm version](https://img.shields.io/npm/v/mcp-stdio-http-bridge.svg)](https://www.npmjs.com/package/mcp-stdio-http-bridge)
-[![CI](https://github.com/wsd-team-dev/mcp-stdio-http-bridge/actions/workflows/ci.yml/badge.svg)](https://github.com/wsd-team-dev/mcp-stdio-http-bridge/actions/workflows/ci.yml)
+[![CI](https://github.com/thefoot/mcp-stdio-http-bridge/actions/workflows/ci.yml/badge.svg)](https://github.com/thefoot/mcp-stdio-http-bridge/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Node.js Version](https://img.shields.io/node/v/mcp-stdio-http-bridge.svg)](https://nodejs.org)
 [![npm downloads](https://img.shields.io/npm/dm/mcp-stdio-http-bridge.svg)](https://www.npmjs.com/package/mcp-stdio-http-bridge)
