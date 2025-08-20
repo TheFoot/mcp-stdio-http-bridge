@@ -1,0 +1,23 @@
+# Source files
+test/
+coverage/
+.github/
+
+# Config files
+.eslintrc.json
+.prettierrc.json
+.gitignore
+.npmignore
+
+# Development
+*.log
+.env
+.env.*
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

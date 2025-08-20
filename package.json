@@ -1,0 +1,71 @@
+{
+  "name": "mcp-stdio-http-bridge",
+  "version": "1.0.0",
+  "description": "Universal bridge between stdio-based MCP clients (like Claude Code) and HTTP-based MCP servers",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "bridge",
+    "proxy",
+    "stdio",
+    "http",
+    "streamable-http",
+    "ai",
+    "llm",
+    "claude",
+    "anthropic"
+  ],
+  "homepage": "https://github.com/wsd-team-dev/mcp-stdio-http-bridge#readme",
+  "bugs": {
+    "url": "https://github.com/wsd-team-dev/mcp-stdio-http-bridge/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wsd-team-dev/mcp-stdio-http-bridge.git"
+  },
+  "license": "MIT",
+  "author": "WSD Team <dev@wsd-team.com>",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./src/index.js",
+      "require": "./src/index.js"
+    }
+  },
+  "main": "./src/index.js",
+  "bin": {
+    "mcp-bridge": "./src/cli.js",
+    "mcp-stdio-http-bridge": "./src/cli.js"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "start": "node src/cli.js",
+    "test": "LOG_LEVEL=error node --test test/**/*.test.js",
+    "test:coverage": "LOG_LEVEL=error c8 --check-coverage --lines 95 --functions 95 --branches 90 npm test",
+    "test:watch": "LOG_LEVEL=error node --test --watch test/**/*.test.js",
+    "lint": "eslint src test",
+    "format": "prettier --write \"**/*.{js,json,md,yml}\"",
+    "format:check": "prettier --check \"**/*.{js,json,md,yml}\"",
+    "quality": "npm run format && npm run lint -- --fix",
+    "outdated": "npm outdated",
+    "prepublishOnly": "npm run test:coverage"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "commander": "^12.0.0",
+    "pino": "^9.5.0",
+    "pino-pretty": "^13.0.0"
+  },
+  "devDependencies": {
+    "c8": "^10.1.2",
+    "eslint": "^9.17.0",
+    "prettier": "^3.4.2",
+    "sinon": "^19.0.2"
+  }
+}

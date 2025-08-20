@@ -1,0 +1,41 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(mkdir:*)",
+      "Bash(npm install)",
+      "Bash(cp:*)",
+      "Bash(npm test)",
+      "Bash(npm run *)",
+      "Bash(npm run)",
+      "Bash(rm:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run lint:*)",
+      "Bash(npm run dev:*)",
+      "Bash(grep:*)",
+      "Bash(node:*)",
+      "Bash(npm start)",
+      "Bash(curl:*)",
+      "Bash(npm run quality:*)",
+      "WebFetch(domain:docs.anthropic.com)",
+      "mcp__docauto-mcp__echo",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git push:*)",
+      "Bash(npm whoami:*)",
+      "Bash(npm ping)",
+      "Bash(npm install)",
+      "Bash(rm:*)",
+      "Bash(npm test)",
+      "Bash(npm run lint)",
+      "Bash(node:*)",
+      "Bash(chmod:*)",
+      "Bash(timeout:*)",
+      "Bash(echo \"Exit code: $?\")",
+      "Bash(npm run quality:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

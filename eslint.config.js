@@ -1,0 +1,36 @@
+export default [
+  {
+    files: ['**/*.js'],
+    languageOptions: {
+      ecmaVersion: 2024,
+      sourceType: 'module',
+      globals: {
+        console: 'readonly',
+        process: 'readonly',
+        Buffer: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        global: 'readonly',
+        globalThis: 'readonly',
+        setTimeout: 'readonly',
+        clearTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearInterval: 'readonly',
+      },
+    },
+    rules: {
+      'max-len': ['error', { code: 100, ignoreComments: true, ignoreUrls: true }],
+      'object-curly-spacing': ['error', 'always'],
+      'comma-dangle': ['error', 'always-multiline'],
+      indent: ['error', 2],
+      quotes: ['error', 'single'],
+      'prefer-const': 'error',
+      'no-var': 'error',
+      'no-unused-vars': 'error',
+      'no-console': 'off',
+      camelcase: 'error',
+      'new-cap': 'error',
+      'no-trailing-spaces': 'error',
+    },
+  },
+];
