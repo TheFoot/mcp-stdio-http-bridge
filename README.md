@@ -1,10 +1,10 @@
 # mcp-stdio-http-bridge
 
-[![npm version](https://img.shields.io/npm/v/mcp-stdio-http-bridge.svg)](https://www.npmjs.com/package/mcp-stdio-http-bridge)
+[![npm version](https://img.shields.io/npm/v/@thefoot/mcp-stdio-http-bridge.svg)](https://www.npmjs.com/package/@thefoot/mcp-stdio-http-bridge)
 [![CI](https://github.com/thefoot/mcp-stdio-http-bridge/actions/workflows/ci.yml/badge.svg)](https://github.com/thefoot/mcp-stdio-http-bridge/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Node.js Version](https://img.shields.io/node/v/mcp-stdio-http-bridge.svg)](https://nodejs.org)
-[![npm downloads](https://img.shields.io/npm/dm/mcp-stdio-http-bridge.svg)](https://www.npmjs.com/package/mcp-stdio-http-bridge)
+[![Node.js Version](https://img.shields.io/node/v/@thefoot/mcp-stdio-http-bridge.svg)](https://nodejs.org)
+[![npm downloads](https://img.shields.io/npm/dm/@thefoot/mcp-stdio-http-bridge.svg)](https://www.npmjs.com/package/@thefoot/mcp-stdio-http-bridge)
 
 Universal bridge between stdio-based MCP clients (like Claude Code) and HTTP-based MCP servers.
 
@@ -26,19 +26,19 @@ Many MCP (Model Context Protocol) clients, including Claude Code CLI, only suppo
 ### Global Installation
 
 ```bash
-npm install -g mcp-stdio-http-bridge
+npm install -g @thefoot/mcp-stdio-http-bridge
 ```
 
 ### Local Installation
 
 ```bash
-npm install mcp-stdio-http-bridge
+npm install @thefoot/mcp-stdio-http-bridge
 ```
 
 ### Using npx (no installation)
 
 ```bash
-npx mcp-stdio-http-bridge --url http://localhost:3200/mcp
+npx @thefoot/mcp-stdio-http-bridge --url http://localhost:3200/mcp
 ```
 
 ## Usage
@@ -82,7 +82,7 @@ Configure in your project's `.mcp.json`:
   "mcpServers": {
     "my-server": {
       "command": "npx",
-      "args": ["mcp-stdio-http-bridge"],
+      "args": ["@thefoot/mcp-stdio-http-bridge"],
       "env": {
         "MCP_HTTP_URL": "http://localhost:3200/mcp"
       }
@@ -107,7 +107,7 @@ Or install globally and use directly:
 ### Programmatic Usage
 
 ```javascript
-import { MCPBridge } from 'mcp-stdio-http-bridge';
+import { MCPBridge } from '@thefoot/mcp-stdio-http-bridge';
 
 const bridge = new MCPBridge({
   url: 'http://localhost:3200/mcp',
@@ -170,7 +170,7 @@ services:
 
   mcp-bridge:
     image: node:24-alpine
-    command: npx mcp-stdio-http-bridge --url http://mcp-server:3200/mcp
+    command: npx @thefoot/mcp-stdio-http-bridge --url http://mcp-server:3200/mcp
     depends_on:
       - mcp-server
     environment:
@@ -192,7 +192,7 @@ services:
         "host",
         "node:24-alpine",
         "npx",
-        "mcp-stdio-http-bridge"
+        "@thefoot/mcp-stdio-http-bridge"
       ],
       "env": {
         "MCP_HTTP_URL": "http://localhost:3200/mcp"

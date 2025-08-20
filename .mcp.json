@@ -1,0 +1,13 @@
+{
+    "mcpServers": {
+        "docauto-mcp": {
+            "command": "node",
+            "args"   : [
+                "src/cli.js"
+            ],
+            "env"    : {
+                "MCP_HTTP_URL": "http://localhost:3200/mcp"
+            }
+        }
+    }
+}

@@ -15,16 +15,16 @@
     "claude",
     "anthropic"
   ],
-  "homepage": "https://github.com/wsd-team-dev/mcp-stdio-http-bridge#readme",
+  "homepage": "https://github.com/thefoot/mcp-stdio-http-bridge#readme",
   "bugs": {
-    "url": "https://github.com/wsd-team-dev/mcp-stdio-http-bridge/issues"
+    "url": "https://github.com/thefoot/mcp-stdio-http-bridge/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wsd-team-dev/mcp-stdio-http-bridge.git"
+    "url": "git+https://github.com/thefoot/mcp-stdio-http-bridge.git"
   },
   "license": "MIT",
-  "author": "WSD Team <dev@wsd-team.com>",
+  "author": "TheFoot",
   "type": "module",
   "exports": {
     ".": {
