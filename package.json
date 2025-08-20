@@ -1,6 +1,6 @@
 {
   "name": "@thefoot/mcp-stdio-http-bridge",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Universal bridge between stdio-based MCP clients (like Claude Code) and HTTP-based MCP servers",
   "keywords": [
     "mcp",
