@@ -8,14 +8,18 @@ import assert from 'node:assert';
 import { spawn } from 'child_process';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
+import { readFileSync } from 'fs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const cliPath = join(__dirname, '../src/cli.js');
+const packagePath = join(__dirname, '../package.json');
+const packageJson = JSON.parse(readFileSync(packagePath, 'utf8'));
+const expectedVersion = packageJson.version;
 
 describe('CLI', () => {
   test('should display version', async () => {
     const result = await runCLI(['--version']);
-    assert(result.stdout.includes('1.0.0'));
+    assert(result.stdout.includes(expectedVersion));
     assert.strictEqual(result.code, 0);
   });
 
